@@ -1,0 +1,47 @@
+*, *::before, *::after {
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+}
+
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+ul {
+    list-style: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0;
+}
+
+li:nth-child(odd) {
+    background-color: bisque;
+}
+
+li {
+    position: relative;
+    height: 70px;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: darkgreen;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    min-width: max-content;
+}
+
+p#albumName {
+    position: relative;
+    top: 15px;
+    left: 10px;
+    margin: 0;
+    max-width: max-content;
+}
+
+img {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
