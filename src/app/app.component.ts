@@ -10,8 +10,9 @@ import { fail } from 'assert';
 })
 export class AppComponent {
 
-  private loading: boolean = false;
-  private noResults: boolean = false;
+  loading: boolean = false;
+  noResults: boolean = false;
+  songs: SearchService = this.itunes;
 
   constructor(private itunes: SearchService ) {
     this.doSearch('metallica');
@@ -19,10 +20,10 @@ export class AppComponent {
 
   doSearch(term: string) {
     this.loading = true;
-    this.itunes.search(term).then( () => {
+    this.songs.search(term).then( () => {
       
       this.loading = false;
-      this.noResults = this.itunes.results.length == 0 ? true : false;
+      this.noResults = this.songs.results.length == 0 ? true : false;
 
     });
   }
